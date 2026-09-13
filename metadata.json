@@ -1,0 +1,6 @@
+{
+  "name": "دعوة زفاف فاخرة",
+  "description": "دعوة زفاف إلكترونية تفاعلية فاخرة مع بوابة قصر الفرح وتأكيد حضور عبر واتساب",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

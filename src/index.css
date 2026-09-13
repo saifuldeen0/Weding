@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Cairo', sans-serif;
+    background-color: #05070c;
+    color: #f5eedc;
+    overflow-x: hidden;
+  }
+  
+  .font-amiri {
+    font-family: 'Amiri', serif;
+  }
+  
+  .font-cairo {
+    font-family: 'Cairo', sans-serif;
+  }
+  
+  .font-ruqaa {
+    font-family: 'Aref Ruqaa', serif;
+  }
+}
+
+/* Luxury Gold Gradients & Text */
+.gold-text-gradient {
+  background: linear-gradient(135deg, #FFF6D5 0%, #D4AF37 35%, #AA771C 70%, #F5DEB3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border-gradient {
+  border-image: linear-gradient(135deg, #d4af37, #fef08a, #996515, #e6c280) 1;
+}
+
+/* Glassmorphism */
+.luxury-glass {
+  background: rgba(12, 18, 30, 0.65);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 25px rgba(212, 175, 55, 0.15);
+}
+
+.luxury-glass-subtle {
+  background: rgba(18, 25, 42, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+/* Door 3D Perspective and Shake */
+.perspective-1200 {
+  perspective: 1200px;
+}
+
+@keyframes doorShakeAnim {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  10%, 30%, 50%, 70%, 90% { transform: translate(-3px, 1px) rotate(-0.5deg); }
+  20%, 40%, 60%, 80% { transform: translate(3px, -1px) rotate(0.5deg); }
+}
+
+.door-shaking {
+  animation: doorShakeAnim 0.7s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+/* Butterfly 3D Wing Flap */
+@keyframes wingFlapLeft {
+  0%, 100% { transform: rotateY(0deg); }
+  50% { transform: rotateY(70deg); }
+}
+
+@keyframes wingFlapRight {
+  0%, 100% { transform: rotateY(0deg); }
+  50% { transform: rotateY(-70deg); }
+}
+
+.butterfly-wing-left {
+  transform-origin: right center;
+  animation: wingFlapLeft 0.18s ease-in-out infinite alternate;
+}
+
+.butterfly-wing-right {
+  transform-origin: left center;
+  animation: wingFlapRight 0.18s ease-in-out infinite alternate;
+}
+
+/* Pulse animation with golden glow */
+@keyframes royalPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+  }
+  50% {
+    transform: scale(1.04);
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.7);
+  }
+}
+
+.royal-pulse {
+  animation: royalPulse 2.4s ease-in-out infinite;
+}
+
+/* Golden Star / Shimmer Float */
+@keyframes floatGently {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(2deg); }
+}
+
+.float-gentle {
+  animation: floatGently 4s ease-in-out infinite;
+}
+
